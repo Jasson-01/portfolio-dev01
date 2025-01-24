@@ -3,8 +3,8 @@ import Badge from "../components/Badge.astro";
 import Layout from "../layouts/Layout.astro";
 import LinkedIn from "../components/icons/LinkedIn.astro";
 import SocialPill from "../components/SocialPill.astro";
-import GitHubIcon from "../components/icons/GitHubIcon.astro"
-import EmailIcon from "../components/icons/EmailIcon.astro"
+import GitHubIcon from "../components/icons/GitHubIcon.astro";
+import EmailIcon from "../components/icons/EmailIcon.astro";
 import Experience from "../components/Experience.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Briefcase from "../components/icons/Briefcase.astro";
@@ -12,13 +12,15 @@ import Briefcase from "../components/icons/Briefcase.astro";
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
+
 <div class="prueba"></div>
 
-<Layout title="Portfolio de Jasson - Desarrollador y Programador Web." description="Contrata a Jasson para crear tu aplicación web o móvil. Desarrollador Web y Estudiante de Ciencias de la Computación. Especializado en crear aplicaciones únicas.">
+<Layout
+  title="Portfolio de Jasson - Desarrollador y Programador Web."
+  description="Contrata a Jasson para crear tu aplicación web o móvil. Desarrollador Web y Estudiante de Ciencias de la Computación. Especializado en crear aplicaciones únicas."
+>
   <main class="relative">
-
     <SectionContainer class="py-16 md:pb-36">
-
       <div class="max-w-100px">
         <img
           class="rounded-full size-20 mb-4 ml-auto"
@@ -50,16 +52,17 @@ import Briefcase from "../components/icons/Briefcase.astro";
         </SocialPill>
         <SocialPill href="">
           <EmailIcon class="size-6" />
-           jason.davila001@gmail.com
+          jason.davila001@gmail.com
         </SocialPill>
       </nav>
-    </section>
+    </SectionContainer>
 
-    <SectionContainer>
-       <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 item-center">
-        <Briefcase  class="size-7"/>
-        Experiencia laboral</h2>
-       <Experience />
+    <SectionContainer id="experience">
+      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 item-center">
+        <Briefcase class="size-7" />
+        Experiencia laboral
+      </h2>
+      <Experience />
     </SectionContainer>
   </main>
 </Layout>
