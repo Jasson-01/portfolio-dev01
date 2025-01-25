@@ -8,6 +8,8 @@ import EmailIcon from "../components/icons/EmailIcon.astro";
 import Experience from "../components/Experience.astro";
 import SectionContainer from "../components/SectionContainer.astro";
 import Briefcase from "../components/icons/Briefcase.astro";
+import Code from "../components/icons/Code.astro";
+import Projects from "../components/Projects.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -20,7 +22,7 @@ import Briefcase from "../components/icons/Briefcase.astro";
   description="Contrata a Jasson para crear tu aplicación web o móvil. Desarrollador Web y Estudiante de Ciencias de la Computación. Especializado en crear aplicaciones únicas."
 >
   <main class="relative" class="px-4">
-    <SectionContainer class="py-16 md:pb-36">
+    <SectionContainer class="py-44 md:pb-32">
       <div class="max-w-100px">
         <img
           class="rounded-full size-20 mb-4 ml-auto"
@@ -58,11 +60,19 @@ import Briefcase from "../components/icons/Briefcase.astro";
     </SectionContainer>
 
     <SectionContainer id="experience">
-      <h2 class="text-2xl font-semibold mb-6 flex gap-x-3 item-center">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 item-center">
         <Briefcase class="size-7" />
         Experiencia laboral
       </h2>
       <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="experience">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 item-center">
+        <Code class="size-9" />
+         Proyectos
+      </h2>
+      <Projects />
     </SectionContainer>
   </main>
 </Layout>
