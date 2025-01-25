@@ -1,15 +1,38 @@
 ---
+import NextJS from "./icons/NextJS.astro"
+import Tailwind from "./icons/Tailwind.astro"
+
+const TAGS = {
+  NEXT: {
+    name: "Next.js",
+    class: "bg-black text-white",
+    icon: NextJS,
+  },
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-[#003159] text-white",
+    icon: Tailwind,
+  },
+}
 const PROJECTS = [
   {
     title: "SVGL - A beautiful library with SVG logos",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipiscing elit consequat non, nunc senectus enim condimentum potenti taciti ridiculus morbi.",
+      "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
     link: "https://svgl.vercel.app/",
     github: "https://github.com/pheralb/svgl",
-    image: "/projects/APP11.webp",
-    tags: ["Next.js", "Tailwind CSS", "React"],
+    image: "/projects/svgl.webp",
+    tags: [TAGS.NEXT, TAGS.TAILWIND],
   },
-];
+  {
+    title: "AdventJS - Retos de programación con JavaScript y TypeScript",
+    description:
+      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
+    link: "https://adventjs.dev",
+    image: "/projects/adventjs.webp",
+    tags: [TAGS.NEXT, TAGS.TAILWIND],
+  },
+]
 ---
 
 {
@@ -17,9 +40,14 @@ const PROJECTS = [
     <article>
       <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
       <p class="text-lg mb-4 text-pretty">{description}</p>
-      <ul>
+      <ul class="flex gap-x-2 flex-row mb-2">
         {tags.map((tag) => (
-          <li>{tag}</li>
+          <li>
+            <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}>
+              <tag.icon class="size-4" />  
+              {tag.name}
+            </span>
+          </li>
         ))}
       </ul>
       <img
