@@ -10,6 +10,7 @@ import SectionContainer from "../components/SectionContainer.astro";
 import Briefcase from "../components/icons/Briefcase.astro";
 import Code from "../components/icons/Code.astro";
 import Projects from "../components/Projects.astro";
+import AboutMe from "../components/AboutMe.astro";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -22,16 +23,18 @@ import Projects from "../components/Projects.astro";
   description="Contrata a Jasson para crear tu aplicación web o móvil. Desarrollador Web y Estudiante de Ciencias de la Computación. Especializado en crear aplicaciones únicas."
 >
   <main class="relative" class="px-4">
-    <SectionContainer class="py-44 md:pb-32">
-      <div class="max-w-100px">
+    <SectionContainer class="relative md:pb-32 right-0 top-0">
+      <div class="absolute rounded-full size-60 z-10 top-0 -right-7">
         <img
-          class="rounded-full size-20 mb-4 ml-auto"
+          class="rounded-full size-60"
           src="../../public/uno.jpeg"
           alt="jasson photo"
         />
       </div>
-      <h1 class="text-white text-3xl md:text-4xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
-        Hey, soy Jasson <a
+      <h1
+        class="right-14 text-white text-3xl md:text-4xl font-bold flex flex-row gap-x-4 pb-3 lg:pb-5 top-0 text-pretty"
+      >
+        Jasson Davila Bustamante <a
           href="https://www.linkedin.com/in/jason-davila-bustamante"
           target="_blank"
           rel="noopener"
@@ -39,38 +42,45 @@ import Projects from "../components/Projects.astro";
           ><Badge>Disponible para <br /> trabajar</Badge></a
         >
       </h1>
-      <h2 class="text-xl text-2xl opacity-90 text-wrap max-w-[700px]">
+      <h2
+        class="py-0 text-xl text-2xl opacity-90 text-wrap max-w-[700px] mb-7 mt-0"
+      >
         Desarrollador web y Estudiante de Ciencias de la Computación.
         Especializado en crear aplicaciones únicas.
       </h2>
       <nav class="flex gap-4 mt-8 flex-wrap">
-        <SocialPill href="">
+        <SocialPill href="https://www.linkedin.com/in/jason-davila-bustamante">
           <LinkedIn class="size-4 md:size-6" />
-          LinkedIn
         </SocialPill>
-        <SocialPill href="">
+        <SocialPill href="https://github.com/Jasson-01">
           <GitHubIcon class="size-4 md:size-6" />
-          GitHub
         </SocialPill>
         <SocialPill href="">
           <EmailIcon class="size-4 md:size-6" />
-          jason.davila001@gmail.com
         </SocialPill>
       </nav>
     </SectionContainer>
 
-    <SectionContainer id="experience">
+    <SectionContainer id="aboutme">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 item-center">
+        <Briefcase class="size-9" />
+         About me
+      </h2>
+      <AboutMe />
+    </SectionContainer>
+
+    <!-- <SectionContainer id="experience">
       <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 item-center">
         <Briefcase class="size-7" />
         Experiencia laboral
       </h2>
       <Experience />
-    </SectionContainer>
+    </SectionContainer> -->
 
     <SectionContainer id="experience">
       <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 item-center">
         <Code class="size-9" />
-         Proyectos
+        Proyectos
       </h2>
       <Projects />
     </SectionContainer>
@@ -79,7 +89,7 @@ import Projects from "../components/Projects.astro";
 
 <style>
   .prueba {
-    position: fixed;
+    position: absolute;
     width: 300px;
     height: 300px;
     background-color: #1e67ba;
