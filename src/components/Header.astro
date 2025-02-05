@@ -1,16 +1,23 @@
-<header
-  class="relative flex justify-center items-center py-5 w-full mx-auto mb-20 bg-white border-gray-200 dark:bg-slate-900"
->
-  <nav class="fixed top-0 flex flex-row gap-x-14 opacity-80 text-2xl">
-    <a href="#top">Home</a>
-    <a href="#aboutMe">About me</a>
-    <!-- <a href="#experience">Experience</a> -->
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
+---
+import Navigation from "./Navigation.astro";
+import Hamburger from "./Hamburger.astro";
+import "@fontsource-variable/onest";
+
+---
+
+<header>
+  <nav>
+    <Hamburger />
+    <Navigation />
   </nav>
 </header>
 
-<script>
+<style>
+  a {
+    font-family: "Onest Variable", system-ui, sans-serif;
+  }
+</style>
+<!-- <script>
   const navegacion = document.querySelector("nav");
   window.addEventListener("scroll", () => {
     if (window.scrollY < 0) {
@@ -19,4 +26,4 @@
       navegacion?.classList.remove("hidden");
     }
   });
-</script>
+</script> -->
